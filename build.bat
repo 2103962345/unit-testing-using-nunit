@@ -43,7 +43,7 @@ if not "%errorlevel%"=="0" goto failure
 cd ..
 :REM Package
 mkdir %cd%\..\artifacts
-call dotnet pack PrimeService --configuration %config% %packversionsuffix% --output %cd%\..\artifacts
+call dotnet pack PrimeService --include-symbols --configuration %config% %packversionsuffix% --output %cd%\..\artifacts
 if not "%errorlevel%"=="0" goto failure
 
 :success
